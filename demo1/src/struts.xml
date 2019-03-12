@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 配置Struts2的常量 -->
+<!--
+    <constant name="struts.action.extension" value="dd" />
+-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+<!--abstract=""-->
+    <package name="demo1" extends="struts-default" namespace="/" >
+        <action name="student" class="com.hss.structs.demo1.action.StudentAction" method="add">
+            <result name="success">/jsp/success.jsp</result>
+        </action>
+
+        <action name="actionDemo2" class="com.hss.structs.demo1.action.ActionDemo2" >
+            <result name="success">/jsp/success.jsp</result>
+        </action>
+
+        <action name="actionDemo3" class="com.hss.structs.demo1.action.ActionDemo3" >
+            <result name="success">/jsp/success.jsp</result>
+        </action>
+    </package>
+
+   <package name="demo2" extends="struts-default" namespace="/">
+        <action name="studentSave" class="com.hss.structs.demo1.demo2.StudentAction" method="save">
+
+        </action>
+
+        <action name="studentDel" class="com.hss.structs.demo1.demo2.StudentAction" method="del">
+
+        </action>
+        <action name="studentAdd" class="com.hss.structs.demo1.demo2.StudentAction" method="add">
+
+        </action>
+    </package>
+
+
+    <package name="demo3" extends="struts-default" namespace="/">
+        <action name="student_*" class="com.hss.structs.demo1.demo2.StudentAction" method="{1}">
+
+        </action>
+
+        <action name="userAction" class="com.hss.structs.demo1.dynamic.UserAction"></action>
+    </package>
+
+<!--
+    	<include file="com/itheima/struts/demo3/struts_demo3.xml"/>
+
+-->
+</struts>
