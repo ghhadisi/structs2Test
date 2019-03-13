@@ -1,7 +1,6 @@
-package com.hss.structs.demo1.dynamic;
+package com.hss.structs.day1.dynamic;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.commons.fileupload.servlet.ServletRequestContext;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpServletRequest;

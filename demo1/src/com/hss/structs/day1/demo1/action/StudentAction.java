@@ -1,4 +1,4 @@
-package com.hss.structs.demo1.action;
+package com.hss.structs.day1.demo1.action;
 
 /**
  * Action的编写方式：Action类是一个POJO的类

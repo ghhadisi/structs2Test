@@ -9,40 +9,40 @@
 -->
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
 <!--abstract=""-->
-    <package name="demo1" extends="struts-default" namespace="/" >
-        <action name="student" class="com.hss.structs.demo1.action.StudentAction" method="add">
+    <package name="day1_demo1" extends="struts-default" namespace="/" >
+        <action name="student" class="com.hss.structs.day1.demo1.action.StudentAction" method="add">
             <result name="success">/jsp/success.jsp</result>
         </action>
 
-        <action name="actionDemo2" class="com.hss.structs.demo1.action.ActionDemo2" >
+        <action name="actionDemo2" class="com.hss.structs.day1.demo1.action.ActionDemo2" >
             <result name="success">/jsp/success.jsp</result>
         </action>
 
-        <action name="actionDemo3" class="com.hss.structs.demo1.action.ActionDemo3" >
+        <action name="actionDemo3" class="com.hss.structs.day1.demo1.action.ActionDemo3" >
             <result name="success">/jsp/success.jsp</result>
         </action>
     </package>
 
-   <package name="demo2" extends="struts-default" namespace="/">
-        <action name="studentSave" class="com.hss.structs.demo1.demo2.StudentAction" method="save">
+   <package name="day1_demo2" extends="struts-default" namespace="/">
+        <action name="studentSave" class="com.hss.structs.day1.demo2.StudentAction" method="save">
 
         </action>
 
-        <action name="studentDel" class="com.hss.structs.demo1.demo2.StudentAction" method="del">
+        <action name="studentDel" class="com.hss.structs.day1.demo2.StudentAction" method="del">
 
         </action>
-        <action name="studentAdd" class="com.hss.structs.demo1.demo2.StudentAction" method="add">
+        <action name="studentAdd" class="com.hss.structs.day1.demo2.StudentAction" method="add">
 
         </action>
     </package>
 
 
-    <package name="demo3" extends="struts-default" namespace="/">
-        <action name="student_*" class="com.hss.structs.demo1.demo2.StudentAction" method="{1}">
+    <package name="day1_demo3" extends="struts-default" namespace="/">
+        <action name="student_*" class="com.hss.structs.day1.demo1.action.StudentAction" method="{1}">
 
         </action>
 
-        <action name="userAction" class="com.hss.structs.demo1.dynamic.UserAction"></action>
+        <action name="userAction" class="com.hss.structs.day1.dynamic.UserAction"></action>
     </package>
 
 <!--

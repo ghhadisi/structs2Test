@@ -1,4 +1,4 @@
-package com.hss.structs.demo1.demo2;
+package com.hss.structs.day1.demo2;
 
 import com.opensymphony.xwork2.ActionSupport;
 
