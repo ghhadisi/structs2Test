@@ -12,5 +12,11 @@
 </head>
 <body>
 <h2>success</h2>
+
+pageName=${pageName}<br/>
+reqName=${reqName}<br/>
+sessionName=${sessionName}<br/>
+appName=${appName}<br/>
+
 </body>
 </html>

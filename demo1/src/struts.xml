@@ -49,4 +49,66 @@
     	<include file="com/itheima/struts/demo3/struts_demo3.xml"/>
 
 -->
+
+    <package name="day2_demo1" extends="struts-default" namespace="/">
+<!--全局结果页面-->
+        <global-results>
+            <result name="success">/jsp/success.jsp</result>
+            <result name="input">/jsp/day2_demo2.jsp</result>
+
+            <!--
+            Action接口中提供了五个逻辑视图的名称：
+                SUCCESS
+                ERROR
+                LOGIN
+                INPUT		：input在某些拦截器中会使用。
+                NONE
+
+                jsp
+                    <%@ taglib prefix="s" uri="/struts-tags" %>
+                    <s:fielderror/>
+            -->
+        </global-results>
+        <action name="day2_demo1_action1" class="com.hss.structs.day2.demo1.Action1">
+<!--
+            <result name="success">/jsp/success.jsp</result>
+-->
+        </action>
+
+        <action name="day2_demo1_action2" class="com.hss.structs.day2.demo1.Action2">
+<!--
+            <result name="success">/jsp/success.jsp</result>
+-->
+        </action>
+
+        <action name="day2_demo1_action3" class="com.hss.structs.day2.demo1.Action3">
+
+            <result name="success" >/jsp/success.jsp</result>
+<!--
+type属性	：页面跳转的类型。
+    dispatcher	：默认值，请求转发。（Action转发JSP）
+    redirect		：重定向。（Action重定向JSP）
+    chain		：转发。（Action转发Action）
+    redirectAction	：重定向。（Action重定向Action）
+    stream		：Struts2中提供文件下载的功能。
+-->
+        </action>
+
+
+        <action name="day2_demo2_action1" class="com.hss.structs.day2.demo2.Action1">
+        </action>
+
+        <action name="day2_demo2_action2" class="com.hss.structs.day2.demo2.Action2">
+        </action>
+
+        <action name="day2_demo2_action3" class="com.hss.structs.day2.demo2.Action3">
+        </action>
+
+
+        <action name="day2_demo2_action4" class="com.hss.structs.day2.demo2.Action4">
+        </action>
+
+        <action name="day2_demo2_action5" class="com.hss.structs.day2.demo2.Action5">
+        </action>
+    </package>
 </struts>
