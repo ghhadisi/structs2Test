@@ -8,7 +8,7 @@
 -->
     <!-- 配置Struts2的核心过滤器 -->
     <welcome-file-list>
-        <welcome-file>/jsp/day2_demo3.jsp</welcome-file>
+        <welcome-file>/jsp/day3_demo1.jsp</welcome-file>
 
     </welcome-file-list>
 

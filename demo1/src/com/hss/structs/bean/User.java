@@ -8,6 +8,7 @@ public class User {
 	private Integer age;
 	private Date birthday;
 	private Double salary;
+	private int sex;
 	public String getUsername() {
 		return username;
 	}
@@ -38,10 +39,24 @@ public class User {
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
+
+	public int getSex() {
+		return sex;
+	}
+
+	public void setSex(int sex) {
+		this.sex = sex;
+	}
+
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password + ", age=" + age + ", birthday=" + birthday
-				+ ", salary=" + salary + "]";
+		return "User{" +
+				"username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", age=" + age +
+				", birthday=" + birthday +
+				", salary=" + salary +
+				", sex=" + sex +
+				'}';
 	}
-	
 }

@@ -111,4 +111,6 @@
         <action name="day2_demo2_action5" class="com.hss.structs.day2.demo2.Action5">
         </action>
     </package>
+
+    <include file="com/hss/structs/day3/struts_day3.xml" />
 </struts>
