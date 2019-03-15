@@ -113,4 +113,5 @@
     </package>
 
     <include file="com/hss/structs/day3/struts_day3.xml" />
+    <include file="com/hss/structs/day4/struts_day4.xml" />
 </struts>

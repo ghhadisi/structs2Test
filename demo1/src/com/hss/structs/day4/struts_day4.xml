@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+<!--
+    <constant name="struts.ui.theme" value="simple"/>
+-->
+
+    <package name="day4" extends="struts-default" namespace="/">
+
+  <!--      <interceptors>
+            <interceptor name="intcept1" class="com.hss.structs.day4.interceptors.InterceptDemo1" />
+            <interceptor name="intcept2" class="com.hss.structs.day4.interceptors.InterceptDemo2" />
+
+        </interceptors>-->
+
+        <interceptors>
+            <interceptor name="intcept1" class="com.hss.structs.day4.interceptors.InterceptDemo1" />
+            <interceptor name="intcept2" class="com.hss.structs.day4.interceptors.InterceptDemo2" />
+
+
+            <interceptor-stack name="intceptstack1">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="intcept1" />
+                <interceptor-ref name="intcept2" />
+            </interceptor-stack>
+        </interceptors>
+        <global-results>
+            <result name="success">/jsp/success.jsp</result>
+        </global-results>
+        <action name="day4_demo1_action1" class="com.hss.structs.day4.demo1.Action1" >
+            <result>/jsp/day4_result.jsp</result>
+
+    <!--        <interceptor-ref name="defaultStack" />
+            <interceptor-ref name="intcept1" />
+            <interceptor-ref name="intcept2" />-->
+            <interceptor-ref name="intceptstack1" />
+        </action>
+        <action name="day4_demo1_action2" class="com.hss.structs.day4.demo1.UIAction" >
+
+        </action>
+    </package>
+</struts>
